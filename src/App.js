@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios';
+import {useEffect,useState} from 'react';
+import ReactHlsPlayer from 'react-hls-player';
+import Main from './components/Main'
+import Watch from './components/Watch';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
 function App() {
+  const [data,setData] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>   
+    <Navbar data={data} setData={setData}/>
+      <Route path='/' exact>
+        <Main data={data} setData={setData}/>
+      </Route>
+      <Route path='/watch'>
+        <Watch/>
+      </Route>
+    </Router>
+    
     </div>
   );
 }

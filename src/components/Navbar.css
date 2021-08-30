@@ -1,0 +1,36 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#search{
+    /* background-color: red; */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 210px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid white;
+    transition: all 200ms ease;
+    margin-left: auto ;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#search input{
+    height: 100%;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+#search:hover{
+    background-color: white;
+    color: black;
+}
+#search:hover > input{
+    color: black;
+}

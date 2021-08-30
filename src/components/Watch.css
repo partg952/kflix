@@ -1,0 +1,62 @@
+body{
+    color:white;
+}
+#main{
+    position: relative;
+}
+#poster{
+    border-radius: 6px;
+    float: left;
+    margin: 10px;
+}
+
+#main span{
+    float: right;
+    width: 60%;
+}
+
+#cast-info{
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.cast-info-child {
+ margin: 10px;
+}
+
+#cast-info::-webkit-scrollbar{
+    display: none;
+}
+.cast-info-child  img{
+    border-radius: 6px;
+    height: 250px;
+    width: 200px;
+    
+}
+#episodes{
+    width: 100%;
+   display: flex;        
+   flex-wrap: wrap;
+   text-align: left;
+   align-items: center;
+   justify-content: center;
+}
+#episodes *{
+margin: 5px;
+}
+#episodes button{
+    width: 200px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    outline: none;
+    background-color: black;
+    border-radius: 3px;
+    font-weight: bolder;
+    transition: all 400ms ease;
+}
+#episodes button:hover{
+    background-color: white;
+    color: black;
+}
