@@ -52,7 +52,7 @@ function Watch() {
                                 <div>
                                     <button onClick={()=>{
                                         axios.post('https://kdrama-api.herokuapp.com/api/watch',{
-                                            url:'https://www1.dramacool.ai'+episode.ep_url
+                                            url:episode.ep_url
                                         }).then(res=>{
                                             console.log(res.data)
                                             setUrl(res.data.video_url)
