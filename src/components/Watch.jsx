@@ -22,7 +22,7 @@ function Watch() {
             <div id="main">
             {
                 href.length!=0 &&
-            <iframe src={href} width="100%" height="400px" style={{marginTop:'20px'}} frameborder="0"></iframe>
+            <iframe src={href} width="100%" height="400px" style={{marginTop:'20px'}} allowFullScreen frameborder="0"></iframe>
                     }
             <img id='poster' src={info.poster_url} alt="" />
                 <span>
