@@ -29,20 +29,7 @@ function Watch() {
                         <h1> {info.title} </h1>
                         <p>{info.other_info}</p>
                 </span>
-                <div id="cast-info">
-                {
-                        info.length!=0 &&
-                        info.cast.map(cast=>{
-                            return(
-                                <div class="cast-info-child">
-                                    <img src={cast.star_photo} alt="" />
-                                    <p> {cast.name} </p>
-                                </div>
-                            )
-                        })
-
-                    }
-                </div>
+                
                 <div id="episodes">
                 
                     {
@@ -51,12 +38,7 @@ function Watch() {
                             return(
                                 <div>
                                     <button onClick={()=>{
-                                        axios.post('https://kdrama-api.herokuapp.com/api/watch',{
-                                            url:'https://dramacool.bid'+episode.ep_url
-                                        }).then(res=>{
-                                            console.log(res.data)
-                                            setUrl(res.data.video_url)
-                                        })
+                                       setUrl(episode.ep_url)
                                     }}> {episode.ep_number} </button>
                                 </div>
                             )

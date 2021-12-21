@@ -28,18 +28,8 @@ function Main({data,setData}) {
                data.map(items=>{
                    return(
                        <div id='dramas' onClick={()=>{
-                           if(!items.url.includes('drama-detail')){
-                               axios.post('https://kdrama-api.herokuapp.com/api/watch',{url:items.url})
-                               .then(res=>{
-                                var url = res.data.detail_url
-                                sessionStorage.setItem('url',url);
-                                   history.push('/watch')
-                                })
-                            }
-                            else{
-                                sessionStorage.setItem('url',items.url)
-                                history.push('/watch');
-                            }
+                           sessionStorage.setItem( "url", data.url );
+                           history.push("/watch")
                        }}>
                        <img src={items.image_url} alt="" />
                         <p>{items.title}</p>
